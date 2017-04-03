@@ -1,0 +1,24 @@
+{
+  "name": "node_markdown",
+  "version": "1.0.0",
+  "description": "node markdown with shareJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "markdown",
+    "realtime",
+    "sharejs",
+    "node"
+  ],
+  "author": "Kevin Carr",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "redis": "^2.7.1",
+    "redis-server": "^1.1.0",
+    "share": "^0.6.3"
+  }
+}
