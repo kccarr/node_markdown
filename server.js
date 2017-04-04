@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var server
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -36,6 +37,7 @@ var options = {
 
 // attach the express server to sharejs
 sharejs.server.attach(app, options);
+
 
 // listen on port 8000 (for localhost) or the port defined for heroku
 var port = process.env.PORT || 8000;
