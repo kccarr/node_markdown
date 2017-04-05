@@ -2,6 +2,28 @@ window.onload = function() {
     var converter = new showdown.Converter();
     var pad = document.getElementById('pad');
     var markdownArea = document.getElementById('markdown');
+    var COLORS = [
+    '#e21400', '#91580f', '#f8a700', '#f78b00',
+    '#58dc00', '#287b00', '#a8f07a', '#4ae8c4',
+    '#3b88eb', '#3824aa', '#a700ff', '#d300e7'
+    ];
+    document.getElementById("clickMe").onclick = function () {
+      var doc = new jsPDF();
+
+      // We'll make our own renderer to skip this editor
+      var specialElementHandlers = {
+      	'#pad': function(element, renderer){
+      		return true;
+      	}
+      };
+
+      // All units are in the set measurement for the document
+      // This can be changed to "pt" (points), "mm" (Default), "cm", "in"
+      doc.fromHTML(document.getElementById('markdown').get(0), 15, 15, {
+      	'width': 170,
+      	'elementHandlers': specialElementHandlers
+      });
+    };
 
     // make the tab act like a tab
     pad.addEventListener('keydown', function(e) {
