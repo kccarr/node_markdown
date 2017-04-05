@@ -4,7 +4,8 @@ window.onload = function() {
     var markdownArea = document.getElementById('markdown');
 
 
-    document.getElementById("clickMe").onclick = function () {
+    document.getElementById("clickMe").onclick = doFunction();
+    var doFunction = function() {
       var doc = new jsPDF();
 
       // We'll make our own renderer to skip this editor
