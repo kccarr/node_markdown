@@ -2,11 +2,8 @@ window.onload = function() {
     var converter = new showdown.Converter();
     var pad = document.getElementById('pad');
     var markdownArea = document.getElementById('markdown');
-    var COLORS = [
-    '#e21400', '#91580f', '#f8a700', '#f78b00',
-    '#58dc00', '#287b00', '#a8f07a', '#4ae8c4',
-    '#3b88eb', '#3824aa', '#a700ff', '#d300e7'
-    ];
+
+
     document.getElementById("clickMe").onclick = function () {
       var doc = new jsPDF();
 
@@ -23,6 +20,7 @@ window.onload = function() {
       	'width': 170,
       	'elementHandlers': specialElementHandlers
       });
+      doc.save('markdown.pdf');
     };
 
     // make the tab act like a tab
