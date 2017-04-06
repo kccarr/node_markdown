@@ -8,10 +8,17 @@
 </head>
 
 <body class="container-fluid">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Teamroom Markdown Generator</a>
+      </div>
     <div>
-      <button onclick="TogetherJS(this); return false;">Start TogetherJS</button>
-      <button input id="clickMe" type="button" >Save as PDF</button>
+
+      <button onclick="TogetherJS(this); return false;" class="btn btn-default navbar-btn navbar-right">Collaborate</button>
     </div>
+  </nav>
     <section class="row">
         <textarea class="col-md-6 full-height" id="pad">Write markdown text here..</textarea>
         <div class="col-md-6 full-height" id="markdown"></div>
